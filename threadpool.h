@@ -8,9 +8,9 @@
 
 // Used internally, represents a node in the queue
 struct task{
-    void *(*function)(void *);
-    void *args;
-    struct task *next;
+    void *(*function)(void *);  // The worker function to be executed
+    void *args;                 // The data used in the function
+    struct task *next;          // Pointer to the next task in the queue
 };
 
 // Threadpool object that contains all the data for the functions
